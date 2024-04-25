@@ -9,6 +9,10 @@
     width: 8em; /* Largura do menu */
   }
 
+  .carusel {
+    visibility: hidden;
+  }
+
   /* Estilo dos itens do menu principal */
   .menu > li {
     background: #34495e; /* Cor de fundo dos itens */

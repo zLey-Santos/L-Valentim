@@ -95,7 +95,8 @@ ul > li {
 /* Estilo para os links dentro dos itens do menu */
 .menu > li > a {
   -webkit-transform: skewX(-25deg); /* Inclinação ao contrário */
-  padding: 1em 2em; /* Preenchimento interno */
+  padding: 0.5em 1em; /* Preenchimento interno */
+  text-align: center; /* Alinha ao centro horizontalmente */
 }
 
 /* Estilo para o submenu */
@@ -117,6 +118,9 @@ ul > li {
 
 /* Estilo para os links do submenu */
 .submenu > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1em 2em; /* Preenchimento interno */
 }
 
@@ -130,35 +134,11 @@ ul > li {
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.9); /* Sombra */
 }
 
-/* Estilo para itens ímpares do submenu */
-.submenu > li:nth-child(odd) {
-  -webkit-transform: skewX(-25deg) translateX(0); /* Inclinação */
-}
-.submenu > li:nth-child(odd) > a {
-  -webkit-transform: skewX(25deg); /* Inclinação ao contrário */
-}
-.submenu > li:nth-child(odd)::after {
-  right: -50%; /* Posicionamento a partir da direita */
-  -webkit-transform: skewX(-25deg) rotate(3deg); /* Inclinação e rotação */
-}
-
-/* Estilo para itens pares do submenu */
-.submenu > li:nth-child(even) > a {
-  -webkit-transform: skewX(-25deg); /* Inclinação ao contrário */
-}
-.submenu > li:nth-child(even)::after {
-  left: -50%; /* Posicionamento a partir da esquerda */
-  -webkit-transform: skewX(25deg) rotate(3deg); /* Inclinação e rotação */
-}
-
 /* Transições e visibilidade dos itens do submenu */
 .submenu,
 .submenu li {
   opacity: 1; /* Opacidade total */
   visibility: hidden; /* Visibilidade oculta */
-}
-.submenu li {
-  transition: 0.2s ease -webkit-transform; /* Transição suave */
 }
 
 /* Efeito de hover nos itens do menu para mostrar o submenu */
@@ -166,12 +146,4 @@ ul > li {
 .menu > li:hover .submenu li {
   opacity: 1; /* Mostra o submenu */
   visibility: visible; /* Torna os itens visíveis */
-}
-
-/* Ajuste do efeito de hover nos itens do submenu */
-.menu > li:hover .submenu li:nth-child(even) {
-  -webkit-transform: skewX(25deg) translateX(15px); /* Inclinação e deslocamento */
-}
-.menu > li:hover .submenu li:nth-child(odd) {
-  -webkit-transform: skewX(-25deg) translateX(-15px); /* Inclinação e deslocamento */
 }
