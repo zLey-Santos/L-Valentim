@@ -1,0 +1,175 @@
+/* Media Query para telas menores (máximo de 620px de largura) */
+@media screen and (max-width: 620px) {
+  /* Estilo do menu principal */
+  .menu {
+    margin: 0; /* Remove a margem padrão */
+    display: flex; /* Usa flexbox para o layout */
+    gap: 0.1em; /* Define o espaçamento entre os itens */
+    flex-direction: column; /* Define a direção como coluna */
+    width: 8em; /* Largura do menu */
+  }
+
+  /* Estilo dos itens do menu principal */
+  .menu > li {
+    background: #34495e; /* Cor de fundo dos itens */
+    float: none; /* Remove o float para layout flexível */
+    position: relative; /* Posição relativa para posicionamento */
+    transform: skewX(0deg); /* Transformação sem inclinação */
+    /* Adicione prefixos para navegadores */
+    -webkit-transform: skewX(0deg);
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    border-radius: 0 2em 2em 0; /* Borda arredondada */
+  }
+
+  /* Estilo do submenu */
+  .submenu {
+    margin: 1em; /* Margem ao redor do submenu */
+    top: -7em; /* Posicionamento em relação ao topo */
+    left: 12em; /* Posicionamento em relação à esquerda */
+    max-height: 10em; /* Altura máxima do submenu */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  }
+
+  /* Estilo do título da página */
+  .title-pag {
+    display: none; /* Esconde o título da página */
+  }
+
+  /* Estilo do título do menu */
+  .title-name {
+    margin: 0 1em; /* Margem ao redor do título */
+    justify-content: center; /* Alinha ao centro horizontalmente */
+    align-items: center; /* Alinha ao centro verticalmente */
+    font-size: 1.4em; /* Tamanho da fonte */
+  }
+
+  /* Estilo dos títulos */
+  h2 {
+    font-size: 1.8rem; /* Tamanho da fonte */
+  }
+
+  /* Estilo do drawer (submenu) */
+  .submenu {
+    position: absolute; /* Posição absoluta em relação ao pai */
+    width: 10rem; /* Largura do submenu */
+    left: 5em; /* Posicionamento em relação à esquerda */
+    transform: skewX(25deg); /* Inclinação do submenu */
+    /* Adicione prefixos para navegadores */
+    -webkit-transform: skewX(0deg);
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+    transform-origin: left top; /* Define a origem da transformação */
+  }
+
+  /* Estilo dos itens do submenu */
+  .submenu li {
+    background-color: #34495e; /* Cor de fundo dos itens do submenu */
+    position: relative; /* Posição relativa para posicionamento */
+    overflow: hidden; /* Esconde conteúdo fora do limite */
+  }
+
+  /* Estilo dos links do submenu */
+  .submenu > li > a {
+    padding: 0.8em 1em; /* Preenchimento dos links do submenu */
+  }
+
+  /* Pseudo-elemento para efeito visual */
+  .submenu > li::after {
+    content: ""; /* Conteúdo vazio */
+    position: absolute; /* Posição absoluta */
+    top: -125%; /* Posicionamento em relação ao topo */
+    height: 100%; /* Altura total */
+    width: 100%; /* Largura total */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9); /* Sombra */
+  }
+
+  /* Estilo de itens ímpares do submenu */
+  .submenu > li:nth-child(odd) {
+    transform: skewX(0deg) translateX(0); /* Transformação sem inclinação */
+    /* Adicione prefixos para navegadores */
+    -webkit-transform: skewX(0deg) translateX(0);
+    -moz-transform: skewX(0deg) translateX(0);
+    -ms-transform: skewX(0deg) translateX(0);
+    border-radius: 2em 0; /* Borda arredondada */
+    margin-top: 2px; /* Margem superior */
+  }
+  .submenu > li:nth-child(odd) > a {
+    transform: skewX(0deg); /* Transformação sem inclinação nos links */
+    /* Adicione prefixos para navegadores */
+    -webkit-transform: skewX(0deg);
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+  }
+  .submenu > li:nth-child(odd)::after {
+    right: -50%; /* Posicionamento em relação à direita */
+    transform: skewX(0deg) rotate(0deg); /* Transformação sem inclinação */
+    /* Adicione prefixos para navegadores */
+    -webkit-transform: skewX(0deg) rotate(0deg);
+    -moz-transform: skewX(0deg) rotate(0deg);
+    -ms-transform: skewX(0deg) rotate(0deg);
+  }
+
+  /* Estilo de itens pares do submenu */
+  .submenu > li:nth-child(even) {
+    border-radius: 0 2em; /* Borda arredondada */
+    margin-top: 2px; /* Margem superior */
+  }
+  .submenu > li:nth-child(even) > a {
+    transform: skewX(0deg); /* Transformação sem inclinação nos links */
+    /* Adicione prefixos para navegadores */
+    -webkit-transform: skewX(0deg);
+    -moz-transform: skewX(0deg);
+    -ms-transform: skewX(0deg);
+  }
+  .submenu > li:nth-child(even)::after {
+    left: -50%; /* Posicionamento em relação à esquerda */
+    transform: skewX(0deg) rotate(0deg); /* Transformação sem inclinação */
+    /* Adicione prefixos para navegadores */
+    -webkit-transform: skewX(0deg) rotate(0deg);
+    -moz-transform: skewX(0deg) rotate(0deg);
+    -ms-transform: skewX(0deg) rotate(0deg);
+  }
+
+  /* Transições e visibilidade dos itens do submenu */
+  .submenu,
+  .submenu li {
+    opacity: 1; /* Opacidade total */
+    visibility: hidden; /* Visibilidade oculta */
+  }
+  .submenu li {
+    transition: 0.2s ease transform; /* Transição suave da transformação */
+    -webkit-transition: 0.2s ease -webkit-transform; /* Prefixo para WebKit */
+    -moz-transition: 0.2s ease -moz-transform; /* Prefixo para Firefox */
+    -ms-transition: 0.2s ease -ms-transform; /* Prefixo para IE/Edge */
+  }
+  .menu > li:hover .submenu,
+  .menu > li:hover .submenu li {
+    opacity: 1; /* Mostra o submenu */
+    visibility: visible; /* Torna os itens visíveis */
+  }
+  .menu > li:hover .submenu li:nth-child(even) {
+    transform: skewX(0deg) translateX(0px); /* Transformação sem inclinação */
+    /* Adicione prefixos para navegadores */
+    -webkit-transform: skewX(0deg) translateX(0px);
+    -moz-transform: skewX(0deg) translateX(0px);
+    -ms-transform: skewX(0deg) translateX(0px);
+  }
+  .menu > li:hover .submenu li:nth-child(odd) {
+    transform: skewX(0deg) translateX(0px); /* Transformação sem inclinação */
+    /* Adicione prefixos para navegadores */
+    -webkit-transform: skewX(0deg) translateX(0px);
+    -moz-transform: skewX(0deg) translateX(0px);
+    -ms-transform: skewX(0deg) translateX(0px);
+  }
+}
+
+/* Media Query para telas menores (máximo de 665px de largura) */
+@media screen and (max-width: 665px) {
+  /* Estilo do título toggle */
+  .title-toggle {
+    display: block; /* Mostra o título toggle */
+    font-size: 1.3em; /* Tamanho da fonte */
+    padding: 1em 1em; /* Preenchimento */
+  }
+}

@@ -1,8 +1,13 @@
 /* CSS para telas grandes */
+
+/* Define a altura do elemento html como 100% da janela */
 html {
   height: 100%;
 }
+
+/* Estilo para o corpo da página */
 body {
+  /* Define um plano de fundo usando gradientes lineares */
   background: -webkit-linear-gradient(
       rgba(5, 610, 255, 0.4),
       rgba(135, 60, 255, 0) 80%
@@ -16,11 +21,33 @@ body {
           76%);
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
+/* Oculta o elemento com classe 'title-toggle' */
+.title-toggle {
+  display: none;
 }
+
+/* Estilo para a navegação do menu */
+.nav-menu {
+  display: flex; /* Usa flexbox para o layout */
+  flex-direction: column; /* Direção da coluna */
+  align-items: flex-start; /* Alinha os itens à esquerda */
+  margin-left: -2.8em; /* Margem à esquerda */
+  margin-top: 0.3em; /* Margem superior */
+}
+
+/* Estilo para o título h1 */
+h1 {
+  font-size: 3rem; /* Tamanho da fonte */
+  font-weight: 700; /* Peso da fonte */
+  text-align: center; /* Alinha ao centro horizontalmente */
+}
+
+/* Estilo para os itens de lista dentro de ul */
+ul > li {
+  margin-left: 0.1em; /* Margem à esquerda */
+}
+
+/* Limpa o elemento antes e depois com clearfix */
 .cf:before,
 .cf:after {
   content: " ";
@@ -32,132 +59,119 @@ h1 {
 .cf {
   zoom: 1;
 }
+
+/* Estilo para o menu principal */
 .menu {
-  list-style: none;
-  margin: 50px auto;
-  width: 800px;
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
-  width: fit-content;
+  list-style: none; /* Remove os marcadores de lista */
+  margin: 50px auto; /* Margem ao redor do menu */
+  width: 800px; /* Largura do menu */
+  width: -moz-fit-content; /* Largura para Firefox */
+  width: -webkit-fit-content; /* Largura para WebKit */
+  width: fit-content; /* Largura ajustável conforme o conteúdo */
 }
+
+/* Estilo para os itens do menu */
 .menu > li {
-  background: #34495e;
-  float: left;
-  position: relative;
-  -webkit-transform: skewX(25deg);
+  background: #34495e; /* Cor de fundo dos itens do menu */
+  float: left; /* Alinha os itens à esquerda */
+  position: relative; /* Posição relativa para posicionamento */
+  -webkit-transform: skewX(25deg); /* Inclinação */
 }
+
+/* Estilo para os links do menu */
 .menu a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  font-family: Arial, Helvetica;
-  font-size: 1rem;
+  display: block; /* Mostra os links como blocos */
+  color: #fff; /* Cor do texto */
+  text-decoration: none; /* Remove decoração de texto */
+  font-family: Arial, Helvetica; /* Fonte */
+  font-size: 1rem; /* Tamanho da fonte */
 }
+
+/* Efeito de hover nos itens do menu */
 .menu li:hover {
-  background: #e74c3c;
+  background: #e74c3c; /* Cor de fundo ao passar o mouse */
 }
+
+/* Estilo para os links dentro dos itens do menu */
 .menu > li > a {
-  -webkit-transform: skewX(-25deg);
-  padding: 1em 2em;
+  -webkit-transform: skewX(-25deg); /* Inclinação ao contrário */
+  padding: 1em 2em; /* Preenchimento interno */
 }
+
+/* Estilo para o submenu */
 .submenu {
-  position: absolute;
-  width: 13rem;
-  left: 50%;
-  margin-left: -100px;
-  -webkit-transform: skewX(-25deg);
-  -webkit-transform-origin: left top;
+  position: absolute; /* Posição absoluta */
+  width: 13rem; /* Largura do submenu */
+  left: 50%; /* Posicionamento a partir do centro */
+  margin-left: -100px; /* Ajuste fino do posicionamento */
+  -webkit-transform: skewX(-25deg); /* Inclinação */
+  -webkit-transform-origin: left top; /* Origem da transformação */
 }
+
+/* Estilo para os itens do submenu */
 .submenu li {
-  background-color: #34495e;
-  position: relative;
-  overflow: hidden;
+  background-color: #34495e; /* Cor de fundo dos itens do submenu */
+  position: relative; /* Posição relativa para posicionamento */
+  overflow: hidden; /* Esconde conteúdo fora do limite */
 }
+
+/* Estilo para os links do submenu */
 .submenu > li > a {
-  padding: 1em 2em;
+  padding: 1em 2em; /* Preenchimento interno */
 }
+
+/* Pseudo-elemento para efeito visual */
 .submenu > li::after {
-  content: "";
-  position: absolute;
-  top: -125%;
-  height: 100%;
-  width: 100%;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+  content: ""; /* Conteúdo vazio */
+  position: absolute; /* Posição absoluta */
+  top: -125%; /* Posicionamento a partir do topo */
+  height: 100%; /* Altura total */
+  width: 100%; /* Largura total */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.9); /* Sombra */
 }
+
+/* Estilo para itens ímpares do submenu */
 .submenu > li:nth-child(odd) {
-  -webkit-transform: skewX(-25deg) translateX(0);
+  -webkit-transform: skewX(-25deg) translateX(0); /* Inclinação */
 }
 .submenu > li:nth-child(odd) > a {
-  -webkit-transform: skewX(25deg);
+  -webkit-transform: skewX(25deg); /* Inclinação ao contrário */
 }
 .submenu > li:nth-child(odd)::after {
-  right: -50%;
-  -webkit-transform: skewX(-25deg) rotate(3deg);
+  right: -50%; /* Posicionamento a partir da direita */
+  -webkit-transform: skewX(-25deg) rotate(3deg); /* Inclinação e rotação */
 }
-.submenu > li:nth-child(even) {
-}
+
+/* Estilo para itens pares do submenu */
 .submenu > li:nth-child(even) > a {
-  -webkit-transform: skewX(-25deg);
+  -webkit-transform: skewX(-25deg); /* Inclinação ao contrário */
 }
 .submenu > li:nth-child(even)::after {
-  left: -50%;
-  -webkit-transform: skewX(25deg) rotate(3deg);
+  left: -50%; /* Posicionamento a partir da esquerda */
+  -webkit-transform: skewX(25deg) rotate(3deg); /* Inclinação e rotação */
 }
+
+/* Transições e visibilidade dos itens do submenu */
 .submenu,
 .submenu li {
-  opacity: 1;
-  visibility: hidden;
+  opacity: 1; /* Opacidade total */
+  visibility: hidden; /* Visibilidade oculta */
 }
 .submenu li {
-  transition: 0.2s ease -webkit-transform;
+  transition: 0.2s ease -webkit-transform; /* Transição suave */
 }
+
+/* Efeito de hover nos itens do menu para mostrar o submenu */
 .menu > li:hover .submenu,
 .menu > li:hover .submenu li {
-  opacity: 1;
-  visibility: visible;
+  opacity: 1; /* Mostra o submenu */
+  visibility: visible; /* Torna os itens visíveis */
 }
+
+/* Ajuste do efeito de hover nos itens do submenu */
 .menu > li:hover .submenu li:nth-child(even) {
-  -webkit-transform: skewX(25deg) translateX(15px);
+  -webkit-transform: skewX(25deg) translateX(15px); /* Inclinação e deslocamento */
 }
 .menu > li:hover .submenu li:nth-child(odd) {
-  -webkit-transform: skewX(-25deg) translateX(-15px);
-}
-
-/* Media Query para telas menores (máximo de 600px de largura) */
-@media screen and (max-width: 600px) {
-  .menu {
-    margin: 0px; /* Reduz a margem */
-    display: flex;
-    gap: 0.1em;
-    flex-direction: column;
-    /* display: none; */
-  }
-  .menu > li {
-    background: #34495e;
-    float: left;
-    position: relative;
-    -webkit-transform: skewX(25deg);
-  }
-  .submenu {
-    width: 115%; /* Ajusta a largura do submenu para ocupar 100% */
-    margin: 1em; /* Remove a margem lateral */
-    top: -7em;
-    left: 12em;
-    -webkit-transform: skewX(1); /* Remove a inclinação do submenu */
-  }
-
-  .title-pag {
-    display: none;
-  }
-  .title-name {
-    margin: 0 1em;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
+  -webkit-transform: skewX(-25deg) translateX(-15px); /* Inclinação e deslocamento */
 }
