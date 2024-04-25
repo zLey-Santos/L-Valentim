@@ -7,12 +7,12 @@ function updateArticle(serviceName) {
   const services = {
     Inicio: "Conteudo da Página inicial",
     Galeria: "Conteudo da Galeria",
+    Serviços: "Conteudo da Serviço",
     Micropigmentação: "Conteúdo da Micropigmentação",
     "Limpeza de Pele": "Conteúdo da Limpeza de Pele",
     "Remoção a Lazer": "Conteúdo da Remoção a Lazer",
     Outros: "Conteúdo de Outros Serviços",
     Contactos: "Informações de contacto",
-    "Nossa História": "História da empresa",
     Sobrancelha: "conteudo sobre sobrancelhas",
   };
 
@@ -22,14 +22,14 @@ function updateArticle(serviceName) {
     articleContent.textContent = services[serviceName];
   } else {
     // Caso nenhum serviço correspondente seja encontrado, exibe conteúdo padrão
-    articleTitle.textContent = "Inicio";
+    articleTitle.textContent = "Artigo indisponivel";
     articleContent.textContent = getDefaultContent();
   }
 }
 
 // Função para obter o conteúdo padrão da página inicial
 function getDefaultContent() {
-  return "Conteúdo Inicial...";
+  return "Pedimos desculpas pelo inconveniente. Por favor, escolha outro serviço.";
 }
 
 // Adiciona evento de clique para cada item do menu principal

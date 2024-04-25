@@ -44,11 +44,6 @@
     font-size: 1.4em; /* Tamanho da fonte */
   }
 
-  /* Estilo dos títulos */
-  h2 {
-    font-size: 1.8rem; /* Tamanho da fonte */
-  }
-
   /* Estilo do drawer (submenu) */
   .submenu {
     position: absolute; /* Posição absoluta em relação ao pai */
@@ -171,5 +166,10 @@
     display: block; /* Mostra o título toggle */
     font-size: 1.3em; /* Tamanho da fonte */
     padding: 1em 1em; /* Preenchimento */
+  }
+
+  /* Estilo dos títulos */
+  h2 {
+    font-size: 1.5em; /* Tamanho da fonte */
   }
 }
