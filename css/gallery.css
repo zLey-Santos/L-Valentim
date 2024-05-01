@@ -3,25 +3,25 @@ h1 {
   text-transform: uppercase;
 }
 
-.seccion {
+.section {
   width: 60%;
   margin-left: 20%;
 }
 
-.galeria {
+.gallery {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-.galeria ul li,
-.galeria li img {
+.gallery ul li,
+.gallery li img {
   -webkit-transition: all 1s cubic-bezier(0.42, 0.2, 0.2, 0.64);
   -moz-transition: all 1s cubic-bezier(0.42, 0.2, 0.2, 0.64);
   -o-transition: all 1s cubic-bezier(0.42, 0.2, 0.2, 0.64);
   transition: all 1s cubic-bezier(0.42, 0.2, 0.2, 0.64);
 }
 
-.galeria ul li {
+.gallery ul li {
   position: relative;
   float: left;
   width: 140px;
@@ -31,11 +31,11 @@ h1 {
   list-style-type: none;
 }
 
-.galeria ul li:hover {
+.gallery ul li:hover {
   z-index: 99;
 }
 
-.galeria ul li img {
+.gallery ul li img {
   position: absolute;
   left: 0;
   top: 0;
@@ -52,7 +52,7 @@ h1 {
   border-radius: 75px;
 }
 
-.galeria ul li img:hover {
+.gallery ul li img:hover {
   width: 280px;
   height: 280px;
   margin-top: -150px;
