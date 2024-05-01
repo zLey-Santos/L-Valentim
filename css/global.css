@@ -1,0 +1,98 @@
+/* CSS para telas grandes */
+
+/* Define a altura do elemento html como 100% da janela */
+html {
+  height: 100%;
+}
+
+/* Estilo para o corpo da página */
+body {
+  /* Define um plano de fundo usando gradientes lineares */
+  background: -webkit-linear-gradient(
+      rgba(5, 610, 255, 0.4),
+      rgba(135, 60, 255, 0) 80%
+    ),
+    -webkit-linear-gradient(-45deg, rgba(120, 155, 255, 0.9) 25%, rgba(
+            255,
+            160,
+            65,
+            0.9
+          )
+          76%);
+}
+
+/* Oculta o elemento com classe 'title-toggle' */
+.title-toggle {
+  display: none;
+}
+
+/* Estilo para a navegação do menu */
+.nav-menu {
+  display: flex; /* Usa flexbox para o layout */
+  flex-direction: column; /* Direção da coluna */
+  align-items: flex-start; /* Alinha os itens à esquerda */
+  margin-left: -2.8em; /* Margem à esquerda */
+  margin-top: 0.3em; /* Margem superior */
+}
+
+/* Estilo para o título h1 */
+h1 {
+  font-size: 3rem; /* Tamanho da fonte */
+  font-weight: 700; /* Peso da fonte */
+  text-align: center; /* Alinha ao centro horizontalmente */
+  margin-top: 0.4em;
+}
+
+/* Estilo para os itens de lista dentro de ul */
+ul > li {
+  margin-left: 0.1em; /* Margem à esquerda */
+}
+
+/* Limpa o elemento antes e depois com clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+
+/* Media Query para telas menores (máximo de 620px de largura) */
+@media screen and (max-width: 620px) {
+  /* Estilo do menu principal */
+
+  .carusel {
+    visibility: hidden;
+  }
+
+  /* Estilo do título da página */
+  .title-pag {
+    display: none; /* Esconde o título da página */
+  }
+
+  /* Estilo do título do menu */
+  .title-name {
+    margin: 0 1em; /* Margem ao redor do título */
+    justify-content: center; /* Alinha ao centro horizontalmente */
+    align-items: center; /* Alinha ao centro verticalmente */
+    font-size: 1.4em; /* Tamanho da fonte */
+  }
+  /* Media Query para telas menores (máximo de 665px de largura) */
+  @media screen and (max-width: 665px) {
+    /* Estilo do título toggle */
+    .title-toggle {
+      display: block; /* Mostra o título toggle */
+      font-size: 1.3em; /* Tamanho da fonte */
+      padding: 1em 1em; /* Preenchimento */
+    }
+
+    /* Estilo dos títulos */
+    h2 {
+      font-size: 1.5em; /* Tamanho da fonte */
+    }
+  }
+}

@@ -1,63 +1,24 @@
-/* Estilo para o container principal */
-.container {
-  display: flex; /* Usa flexbox para layout */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  width: 100%; /* Largura total */
-  height: 100%; /* Altura total */
+/* Estilos CSS */
+
+.card {
+  display: none;
+  margin-top: 10rem;
+  text-align: center;
+}
+.active {
+  display: block;
 }
 
-/* Estilo para o elemento article */
-article {
-  background-color: #fff; /* Cor de fundo branca */
-  border-radius: 10px; /* Borda arredondada */
-  box-sizing: border-box; /* Inclui a borda na largura/altura */
-  width: 75%; /* Largura do article */
-  height: 100%; /* Altura do article */
-  padding: 1em; /* Preenchimento interno */
-  margin-top: 15em; /* Margem superior */
-}
-
-/* Estilo para o título h2 dentro do article */
 h2 {
-  padding: 0 1em; /* Preenchimento nos lados */
-  text-align: center; /* Alinha ao centro horizontalmente */
-  font-size: 2em; /* Tamanho da fonte */
+  font-size: 2.2em;
+  text-align: center;
+  color: #000;
+  margin-bottom: 10px;
 }
 
-/* Estilo para o conteúdo dentro do article */
-.content {
-  padding: 0, 1em; /* Preenchimento nos lados */
-  font-size: 1.3em; /* Tamanho da fonte */
-  text-align: center; /* Alinha ao centro horizontalmente */
-}
-
-/* Media Query para telas menores (máximo de 600px de largura) */
-@media screen and (max-width: 600px) {
-  /* Ajustes no article para telas menores */
-  article {
-    margin-top: 0.5em; /* Margem superior reduzida */
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-  }
-
-  /* Ajustes no container para telas menores */
-  .container {
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-    margin-top: 1.3em; /* Margem superior aumentada */
-  }
-
-  /* Ajustes no conteúdo para telas menores */
-  .content {
-    padding: 0, 1em; /* Preenchimento nos lados */
-    font-size: 1.2em; /* Tamanho da fonte reduzido */
-    text-align: start; /* Alinha à esquerda */
-  }
-
-  /* Ajustes no título h2 para telas menores */
-  h2 {
-    padding: 0 1em; /* Preenchimento nos lados */
-    text-align: start; /* Alinha à esquerda */
-  }
+p {
+  font-size: 1.3em;
+  text-align: center;
+  color: #000;
+  margin-bottom: 10px;
 }

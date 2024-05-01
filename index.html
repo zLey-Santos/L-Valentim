@@ -4,40 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luana Valentim</title>
-    <link rel="stylesheet" href="./css/menu-nav.css" />
+    <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/card.css" />
-    <link rel="stylesheet" href="./css/menu-toggle.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="css/menu-nav-query.css" />
-    <link rel="stylesheet" href="css/img.css" />
+    <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/carusel.css" />
+    <link rel="stylesheet" href="css/img.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
   </head>
+
   <body>
     <h1 class="title-pag">Luana Valentim Micropigmentação e Estetica</h1>
     <h1 class="title-toggle">
       <span class="title-name">Luana valentim</span>
       Micropigmentação e Estetica
     </h1>
-    <nav>
-      <div class="nav-menu">
-        <ul class="menu cf">
-          <li class="list"><a href="#" id="inicio-link">Inicio</a></li>
-          <li class="list"><a href="#" id="galeria-link">Galeria</a></li>
-          <li class="list">
-            <a href="#">Serviços</a>
-            <img class="lv-picture" alt="Foto da luana valentim" />
-            <ul class="submenu">
-              <li><a href="#">Micropigmentação</a></li>
-              <li><a href="#">Limpeza de Pele</a></li>
-              <li><a href="#">Remoção a Lazer</a></li>
-              <li><a href="#">Sobrancelha</a></li>
-              <li><a href="#">Unhas</a></li>
-              <li><a href="#">Outros</a></li>
-            </ul>
-          </li>
-          <li class="list"><a href="#">Contactos</a></li>
-        </ul>
-      </div>
+    <nav class="my-menu">
+      <ul class="menu cf ">
+        <li onclick="showContent('inicio')" ><a href="#">Inicio</a></li>
+        <li>
+          <a href="#">Serviços</a>
+          <ul class="submenu">
+            <li onclick="showContent('micropigmentacao')"><a href="#">Micropigmentação</a></li>
+            <li onclick="showContent('limpeza-pele')"><a href="#">Limpeza de Pele</a></li>
+            <li onclick="showContent('remocao-lazer')"><a href="#">Remoção a Lazer</a></li>
+            <li onclick="showContent('outros')"><a href="#">Outros</a></li>
+          </ul>
+        </li>
+        <li onclick="showContent('galeria')" ><a href="#">Galeria</a></li>
+        <li onclick="showContent('contacto')"><a href="#">Contactos</a></li>
+      </ul>
     </nav>
     <div class="carusel">
       <div id="drag-container" class="carusel">
@@ -48,7 +44,6 @@
           <img src="https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
           <img src="https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
           <img src="https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-  
           <p>Luana Valentim</p>
         </div>
         <div id="ground"></div>
@@ -56,17 +51,61 @@
       </a>
     </div>
 
-    <div class="container">
-      <article>
-        <h2>Inicio</h2>
-        <div class="content"></div>
-      </article>
-    </div>
+    <article>
+      <div id="inicio" class="card active">
+        <h2>Início</h2>
+        <p>Bem-vindo à nossa página inicial!</p>
+      </div>
 
+      <div id="micropigmentacao" class="card">
+        <h2>Micropigmentação</h2>
+        <p>Descrição de micropigmentacao</p>
+      </div>
+  
+      <div id="limpeza-pele" class="card">
+        <h2>Limpeza de Pele</h2>
+        <p>Descrição de Limpeza de Pele</p>
+      </div>
+  
+      <div id="remocao-lazer" class="card">
+        <h2>Remoção a Lazer</h2>
+        <p>Descrição sobre Remoção a Lazer.</p>
+      </div>
+
+      <div id="outros" class="card">
+        <h2>Outros serviços</h2>
+        <p>Conteudo de outros serviços</p>
+      </div>
+  
+      <div id="galeria" class="card">
+        <h2>Galeria</h2>
+        <div class="seccion">
+          <div class="galeria">
+            <ul>
+              <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal10_wfbbrk.jpg"></li>
+              <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal9_dyhjrd.jpg"></li>
+              <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal8_xyaglw.jpg"></li>
+              <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal7_qezqc6.jpg"></li>
+              <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal5_i77mw0.jpg"></li>
+              <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal4_g8t3o8.jpg"></li>
+              <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal3_eebtfm.jpg"></li>
+              <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal2_jlxmnm.jpg"></li>
+              <li><img src="https://res.cloudinary.com/miweb10/image/upload/v1480451921/01-gal1_fbmz6u.jpg"></li>
+            </ul>
+         </div>
+        </div>
+      </div>
+  
+      <div id="contacto" class="card">
+        <h2>Contacto</h2>
+        <p>Contactos</p>
+      </div>
+    </article>
     <footer>
       <p>Conteudo do footer</p>
     </footer>
     <script src="./js/nav-menu.js"></script>
     <script src="./js/carusel.js"></script>
+    <script src="./js/submenu.js"></script>
   </body>
 </html>

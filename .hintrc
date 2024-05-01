@@ -11,11 +11,7 @@
       }
     ],
     "disown-opener": "off",
-    "axe/text-alternatives": [
-      "default",
-      {
-        "document-title": "off"
-      }
-    ]
+    "axe/text-alternatives": "off",
+    "no-inline-styles": "off"
   }
 }

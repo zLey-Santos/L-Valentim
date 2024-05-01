@@ -1,6 +1,6 @@
 .lv-picture {
   position: absolute;
-  height: 9em;
+  height: 15em;
   width: 10em;
   border: 1px solid;
   margin-left: 12em;
@@ -11,5 +11,11 @@
 @media screen and (max-width: 620px) {
   .lv-picture {
     display: block !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .lv-picture {
+    margin-left: 9em;
   }
 }
