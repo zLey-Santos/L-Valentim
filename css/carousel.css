@@ -113,3 +113,39 @@
     transform: rotateY(0deg);
   }
 }
+
+/* Media Query para telas menores (máximo de 620px de largura) */
+@media screen and (max-width: 620px) {
+  /* Estilo do menu principal */
+
+  .carousel {
+    visibility: hidden;
+  }
+
+  /* Estilo do título da página */
+  .title-pag {
+    display: none; /* Esconde o título da página */
+  }
+
+  /* Estilo do título do menu */
+  .title-name {
+    margin: 0 1em; /* Margem ao redor do título */
+    justify-content: center; /* Alinha ao centro horizontalmente */
+    align-items: center; /* Alinha ao centro verticalmente */
+    font-size: 1.4em; /* Tamanho da fonte */
+  }
+  /* Media Query para telas menores (máximo de 665px de largura) */
+  @media screen and (max-width: 665px) {
+    /* Estilo do título toggle */
+    .title-toggle {
+      display: block; /* Mostra o título toggle */
+      font-size: 1.3em; /* Tamanho da fonte */
+      padding: 1em 1em; /* Preenchimento */
+    }
+
+    /* Estilo dos títulos */
+    h2 {
+      font-size: 1.5em; /* Tamanho da fonte */
+    }
+  }
+}

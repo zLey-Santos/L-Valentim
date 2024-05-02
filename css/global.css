@@ -48,27 +48,8 @@ ul > li {
   margin-left: 0.1em; /* Margem à esquerda */
 }
 
-/* Limpa o elemento antes e depois com clearfix */
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-.cf:after {
-  clear: both;
-}
-.cf {
-  zoom: 1;
-}
-
 /* Media Query para telas menores (máximo de 620px de largura) */
 @media screen and (max-width: 620px) {
-  /* Estilo do menu principal */
-
-  .carusel {
-    visibility: hidden;
-  }
-
   /* Estilo do título da página */
   .title-pag {
     display: none; /* Esconde o título da página */

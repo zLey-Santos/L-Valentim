@@ -56,3 +56,23 @@
   -o-filter: grayscale(0%);
   border-radius: 40px;
 }
+
+@media screen and (max-width: 665px) {
+  .gallery ul li img {
+    left: -30px;
+  }
+
+  .section {
+    width: 0%;
+    margin-left: 25%;
+  }
+
+  .gallery ul li img:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    top: 30%;
+    left: 23%;
+  }
+}

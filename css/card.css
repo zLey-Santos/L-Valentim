@@ -21,3 +21,10 @@ p {
   color: #000;
   margin-bottom: 10px;
 }
+
+/* Media Query para telas menores (máximo de 620px de largura) */
+@media screen and (max-width: 620px) {
+  .card {
+    margin-top: -150px;
+  }
+}
