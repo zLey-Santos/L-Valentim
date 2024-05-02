@@ -121,3 +121,40 @@ body {
 .menu > li:hover .submenu li:nth-child(odd) {
   -webkit-transform: skewX(-25deg) translateX(-15px);
 }
+
+@media screen and (max-width: 41.563rem) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: -2.8rem;
+  }
+  .menu > li {
+    background: #34495e;
+    border-radius: 0 2rem 2rem 0;
+    -webkit-transform: skewX(0deg);
+    gap: 2em;
+    margin-bottom: 0.1rem;
+  }
+
+  .submenu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3em;
+    margin-top: -3rem;
+    -webkit-transform: skewX(0deg);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .submenu {
+    margin-left: 1.8em;
+    width: 11rem;
+  }
+  .submenu > li a {
+    padding: 0.5em 1em;
+  }
+  .menu > li > a {
+    padding: 0.5em 0.8em;
+    font-size: 0.8rem;
+  }
+}
