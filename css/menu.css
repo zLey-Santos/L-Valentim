@@ -62,7 +62,19 @@ body {
   margin-left: -100px;
   -webkit-transform: skewX(-25deg);
   -webkit-transform-origin: left top;
+
+  /* Scroll bar */
+  max-height: 6.99rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0em 2em;
 }
+
+.submenu::-webkit-scrollbar {
+  width: 0; /* Largura da barra de rolagem */
+  height: 0; /* Altura da barra de rolagem */
+}
+
 .submenu li {
   background-color: #34495e;
   position: relative;
@@ -101,6 +113,26 @@ body {
   left: -50%;
   -webkit-transform: skewX(25deg) rotate(3deg);
 }
+
+/* Estilização da seta de rolagem */
+.submenu-container:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 0 8px;
+  border-color: transparent transparent transparent #34495e;
+  z-index: 1;
+}
+
+.submenu-container.scroll-up:before {
+  border-width: 8px 8px 0 8px;
+  border-color: #070707 transparent transparent transparent;
+}
+
 /* Show dropdown */
 .submenu,
 .submenu li {
@@ -122,6 +154,12 @@ body {
   -webkit-transform: skewX(-25deg) translateX(-15px);
 }
 
+@media screen and (max-height: 160px) {
+  .submenu-container:before {
+    display: none; /* Esconde a seta se não houver conteúdo além do limite de altura */
+  }
+}
+
 @media screen and (max-width: 41.563rem) {
   .menu {
     display: flex;
@@ -137,11 +175,15 @@ body {
   }
 
   .submenu {
-    display: flex;
-    flex-direction: column;
     margin-left: 3em;
     margin-top: -3rem;
     -webkit-transform: skewX(0deg);
+
+    /* Scroll bar */
+    max-height: 11rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0em 2em;
   }
 }
 
@@ -149,7 +191,14 @@ body {
   .submenu {
     margin-left: 1.8em;
     width: 11rem;
+
+    /* Scroll bar */
+    max-height: 11rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0em 2em;
   }
+
   .submenu > li a {
     padding: 0.5em 1em;
   }

@@ -12,3 +12,14 @@ function toggleSubMenu(id) {
   const submenu = document.getElementById(id);
   submenu.classList.toggle("active");
 }
+
+function checkScrollDirection(event) {
+  const submenu = event.target;
+  const container = submenu.parentElement;
+
+  if (submenu.scrollTop > 0 && !container.classList.contains("scroll-up")) {
+    container.classList.add("scroll-up");
+  } else if (submenu.scrollTop === 0) {
+    container.classList.remove("scroll-up");
+  }
+}

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/card.css" />
     <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="stylesheet" href="./css/scroll.css" />
     <link rel="stylesheet" href="./css/carousel.css" />
     <link rel="stylesheet" href="css/img.css" />
     <link rel="stylesheet" href="./css/gallery.css" />
@@ -24,18 +25,26 @@
         <li onclick="showContent('inicio')"><a href="#">Início</a></li>
         <li>
           <a href="#">Serviços</a>
-          <ul class="submenu">
-            <li onclick="showContent('micropigmentacao')">
-              <a href="#">Micropigmentação</a>
-            </li>
-            <li onclick="showContent('limpeza-pele')">
-              <a href="#">Limpeza de Pele</a>
-            </li>
-            <li onclick="showContent('remocao-laser')">
-              <a href="#">Remoção a Laser</a>
-            </li>
-            <li onclick="showContent('outros')"><a href="#">Outros</a></li>
-          </ul>
+          <div class="submenu-container">
+            <ul class="submenu" onscroll="checkScrollDirection(event)">
+              <li onclick="showContent('micropigmentacao')">
+                <a href="#">Micropigmentação</a>
+              </li>
+              <li onclick="showContent('limpeza-pele')">
+                <a href="#">Limpeza de Pele</a>
+              </li>
+              <li onclick="showContent('remocao-laser')">
+                <a href="#">Remoção a Laser</a>
+              </li>
+              <li onclick="showContent('outros')"><a href="#">Outros</a></li>
+              <li onclick="showContent('outros')"><a href="#">Outros</a></li>
+              <li onclick="showContent('outros')"><a href="#">Outros</a></li>
+              <li onclick="showContent('outros')"><a href="#">Outros</a></li>
+              <li onclick="showContent('outros')"><a href="#">Outros</a></li>
+              <li onclick="showContent('outros')"><a href="#">Outros</a></li>
+              <li onclick="showContent('outros')"><a href="#">Outros</a></li>
+            </ul>
+          </div>
         </li>
         <li onclick="showContent('galeria')"><a href="#">Galeria</a></li>
         <li onclick="showContent('contato')"><a href="#">Contatos</a></li>
